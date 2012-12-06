@@ -70,3 +70,21 @@
       %li
         multilaterale Positionierung
         %br
+  %section
+    %h2 Gradientenbildung
+    %br
+    %br
+    %p{:align=> "left"}
+      %font{:color => "#FFCC00"}
+        %b Seed-Knoten:
+    %div{:align=> "left"}
+      %ul
+        %li senden: [Position, Hopcount=1]
+    %br
+    %p{:align=> "left"}
+      %font{:color => "#FFCC00"}
+        %b Sensorknoten:
+    %div{:align=> "left"}
+      %ul
+        %li speichern: [Position, Hopcount]
+        %li senden: [Position, Hopcount+1]
