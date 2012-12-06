@@ -77,14 +77,76 @@
     %p{:align=> "left"}
       %font{:color => "#FFCC00"}
         %b Seed-Knoten:
-    %div{:align=> "left"}
+    %div{:align=> "left", :style => "margin-left:50px"}
       %ul
         %li senden: [Position, Hopcount=1]
     %br
     %p{:align=> "left"}
       %font{:color => "#FFCC00"}
         %b Sensorknoten:
-    %div{:align=> "left"}
+    %div{:align=> "left", :style => "margin-left:50px"}
       %ul
         %li speichern: [Position, Hopcount]
         %li senden: [Position, Hopcount+1]
+  %section
+    = image_tag "gradient_1.svg"
+  %section
+    = image_tag "gradient_2.svg"
+  %section
+    = image_tag "gradient_3.svg"
+  %section
+    = image_tag "gradient_4.svg"
+  %section
+    = image_tag "gradient_5.svg"
+  %section
+    = image_tag "gradient_6.svg"
+  %section
+    = image_tag "gradient_7.svg"
+  %section
+    = image_tag "gradient_entwicklung.png"
+  %section
+    %h2 Multilateration
+    %br
+    %br
+    %p{:align => "left"}
+      für jeden Knoten ab
+      %font{:color => "#FFCC00"}
+        %b 3 Distanzwerten
+      möglich
+      %br
+      Anfangswert:
+    %ul{:align => "left"}
+      %li
+        %font{:color => "#FFCC00"}
+          %b nächster
+        Seed-Knoten
+      %li
+        %font{:color => "#FFCC00"}
+          %b Mittelwert
+        aller Seed-Koordinaten
+      %li
+        %font{:color => "#FFCC00"}
+          %b Triangulierung
+        mit 3 Seed-Knoten
+    %br
+    %br
+    %p{:align => "left"}
+      dann:
+      %font{:color => "#FFCC00"}
+        %b Gradientenabstieg
+  %section
+    = image_tag "multilateration.svg"
+  %section
+    %h2 Fehleranalyse
+    %br
+    %br
+    %p{:align => "left", :style => "margin-left:150px"}
+      2 Fehlerquellen:
+    %ul
+      %li
+        Schätzung der
+        %font{:color => "#FFCC00"}
+          %b Distanz
+      %li
+        %font{:color => "#FFCC00"}
+          %b Multilaterationsfehler
