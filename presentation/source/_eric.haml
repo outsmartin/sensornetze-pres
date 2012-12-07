@@ -150,3 +150,70 @@
       %li
         %font{:color => "#FFCC00"}
           %b Multilaterationsfehler
+  %section
+    %h2 Fehler: Distanzschätzung I
+    %br
+    %br
+    %p{:align => "left", :style => "margin-left:150px"}
+      Probleme:
+    %ul
+      %li
+        Hops nicht auf einer
+        %font{:color => "#FFCC00"}
+          %b Geraden
+      %li
+        Hopabstand ist nicht genau
+        %font{:color => "#FFCC00"}
+          %b r
+  %section
+    = image_tag "fehler_distanz_1.svg"
+  %section
+    = image_tag "fehler_distanz_2.svg"
+  %section
+    = image_tag "distance_per_hop_formula.png"
+  %section
+    = image_tag "distance_per_hop.png"
+  %section
+    %h2 Fehler: Distanzschätzung II
+    %br
+    %br
+    %p{:align => "left", :style => "margin-left:150px"}
+      Problem:
+    %ul
+      %li
+        Distanz kann nur ein
+        %font{:color => "#FFCC00"}
+          %b Vielfaches von r
+        sein
+      %li
+        Knoten jenseits der
+        %font{:color => "#FFCC00"}
+          %b Randgebiete
+        fehlerhaft
+      %li
+        %font{:color => "#FFCC00"}
+          %b Erwartungswert
+        des Fehlers:
+        %font{:color => "#FFCC00"}
+          %b r/2
+  %section
+    = image_tag "fehler_granularitaet_1.svg"
+  %section
+    = image_tag "fehler_granularitaet_2.svg"
+  %section
+    %h2 Verbesserung
+    %br
+    %br
+    %ul
+      %li
+        Nutzung der Hopcounts der
+        %font{:color => "#FFCC00"}
+          %b Nachbarn
+      %li
+        Bildung des
+        %font{:color => "#FFCC00"}
+          %b Mittelwertes
+  %section
+    = image_tag "verbesserung_granularitaet_1.svg"
+  %section
+    = image_tag "verbesserung_granularitaet_2.svg"
