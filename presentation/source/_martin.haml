@@ -1,12 +1,7 @@
 %section
-  %section
-    %h1 Lokalisierung in sensornetzen
-    %p Eric Starke
-    %p Martin Schneider
-  %section
-    %h2
-      %br
-    %ul
+  %h1 Lokalisierung in sensornetzen
+  %p Eric Starke
+  %p Martin Schneider
 %section
   %h2 AGENDA
   %ul{:style => "letter-spacing: normal;text-transform: none;"}
@@ -16,23 +11,50 @@
     %li Gradientenverfahren
     %li Fazit
 %section
-  %h2 Motivation
+  %section
+    %h2 Motivation
+    %ul
+      %li GPS Module sind teuer und brauchen viel Energie
+      %li Position nur initial nötig
+      %li Lokalisierung und Positionierung ergänzen sich
+  %section
+    %h2 Begriffe
+    %ul
+      %li Positionierung: Ermittlung globaler Koordinaten
+      %li Lokalisierung: Ermittlung relativer Koordinaten
+
+%section
+  %h2 Klassifikation
+  =image_tag "klassifikation.svg", width: 1000, height: 1000
 %section
   %section
-    %h2 Klassifikation
+    %h2 Position und distanz unbekannt
+    %ul
+      %li Knoten kennen globale Koordinaten nicht
+      %li Knoten kennen lokale Koordinaten nicht
+      %li Knoten merken wer in ihrem Empfangsbereich ist
   %section
-    %h2{:style => ""} bla
+    %h2 Nachbarschaftsmatrix
+    =partial "martin_matrix"
+  %section
+    %h2 Nachbarschaftsgraph
+    =image_tag "nachbarschaftsgraph.svg", width: 1000
+
 %section
-  %h2 Position und distanz unbekannt
+  %section
+    %h2 BEIDES BEKANNT
+    %ul
+      %li Lokalisierung sowie Positionierung vollständig
+      %li Stützstellen für die anderen Verfahren
+      %li Kostenintensiver als einfache Knoten
+  %section
+    %h2 Beispiele
+    %ul
+      %li Smartphones
+      %li WLAN Karten von Google
+      %li GPS in Autos
+
 %section
-  %h2 BEIDES BEKANNT
-%section
-  %h2{:style => ""} NUR DISTANZ BEKANNT
+  %h2 NUR DISTANZ BEKANNT
 %section
   %h2 Nur Position Bekannt
-%section
-  %h2 Gradientenverfahren
-%section
-  %h2 Fazit
-%section
-  %h2 Title
