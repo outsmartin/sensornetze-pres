@@ -18,11 +18,16 @@
       %li Position nur initial nötig
       %li Lokalisierung und Positionierung ergänzen sich
   %section
-    %h2 Begriffe
+    %h2 Begriffserklärung
     %ul
       %li Positionierung: Ermittlung globaler Koordinaten
       %li Lokalisierung: Ermittlung relativer Koordinaten
-
+  %section
+    %h2 Abstand
+    %ul
+      %li wird oft mehrdeutig verwendet
+      %li Anzahl von Hops
+      %li Entfernung anhand von Signalstärke
 %section
   %h2 Klassifikation
   =image_tag "klassifikation.svg", width: 1000, height: 1000
@@ -39,6 +44,8 @@
   %section
     %h2 Nachbarschaftsgraph
     =image_tag "nachbarschaftsgraph.svg", width: 1000
+  %section
+    =image_tag "nachbarschaftsgraph_hindernis.svg", width: 1000
 
 %section
   %section
@@ -61,17 +68,44 @@
       %li eine Art Distanzmaß wird immer gebraucht
       %li ohne globalen Bezugspunkt Nutzung von lokalen Koordinatensystemen
   %section
-    %h2 Globale Koordinaten bekannt
-    =image_tag "global_triang.svg"
+    %h2 Netzaufbau
   %section
-    =image_tag "global_triang2.svg"
+    %h2 Zentrale Algorithmen
+    %ul
+      %li Ein Hauptknoten oder Rechner
+      %li Algorithmus muss global arbeiten
+      %li Kommunikation muss zu der Basisstation gelangen
   %section
-    %h2 Andere Algorithmen
+    %h2 Multidimensional Scaling
+    %ul
+      %li ursprünglich in Mathematischer Psychologie
+      %li arbeitet ohne Beacons oder GPS
+      %li Arbeit mit dem Gesetz der cos() und Stressfunktionen
+  %section
+    =image_tag "mds.png"
+  %section
+    %h2 Dezentrale Algorithmen
+    %ul
+      %li Jeder Knoten rechnet parallel
+      %li Knoten kennen nur Teile des Ganzen
   %section
     %h2 bounding box
     =image_tag "boundingbox.svg", width: 1000
   %section
     %h2 diffusion
     =image_tag "diffusion.svg", width: 1000
+  %section
+    %h2 Globale Koordinaten bekannt
+    =image_tag "global_triang.svg"
+  %section
+    =image_tag "global_triang2.svg"
+  %section
+    %h2 Weitere Algorithmen
+  %section
+    %h2 viele weitere mehr...
+    %ul
+      %li APIT
+      %li Semidefinite Programming
+      %li Gradientenverfahren
 
 
