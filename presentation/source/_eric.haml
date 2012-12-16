@@ -12,16 +12,13 @@
       %br/
     %ul
       %li
-        %font{:color => "#FFCC00"}
-          %b Hopanzahl
+        %span.imp Hopanzahl
         und
-        %font{:color => "#FFCC00"}
-          %b Kommunikationsradius
+        %span.imp Kommunikationsradius
         als Distanzschätzung
       %li
         wenn
-        %font{:color => "#FFCC00"}
-          %b viele Distanzen
+        %span.imp viele Distanzen
         bekannt sind haben kleine Messfehler weniger Auswirkung
         %br/
   %section
@@ -45,22 +42,18 @@
       %br/
     %ul
       %li
-        %font{:color => "#FFCC00"}
-          %b 2D
+        %span.imp 2D
         \- Koordinatensystem
       %li
         Sensorknoten sind
-        %font{:color => "#FFCC00"}
-          %b zufällig
+        %span.imp zufällig
         verteilt
       %li
         Knoten haben kein Wissen über:
         = succeed "," do
-          %font{:color => "#FFCC00"}
-            %b Topologie
+          %span.imp Topologie
         ihre
-        %font{:color => "#FFCC00"}
-          %b Position
+        %span.imp Position
         %br/
   %section
     %h2 Algorithmus
@@ -78,15 +71,13 @@
     %br
     %br
     %p{:align=> "left"}
-      %font{:color => "#FFCC00"}
-        %b Seed-Knoten:
+      %span.imp Seed-Knoten:
     %div{:align=> "left", :style => "margin-left:50px"}
       %ul
         %li senden: [Position, Hopcount=1]
     %br
     %p{:align=> "left"}
-      %font{:color => "#FFCC00"}
-        %b Sensorknoten:
+      %span.imp Sensorknoten:
     %div{:align=> "left", :style => "margin-left:50px"}
       %ul
         %li speichern: [Position, Hopcount]
@@ -116,30 +107,25 @@
     %br
     %p{:align => "left"}
       für jeden Knoten ab
-      %font{:color => "#FFCC00"}
-        %b 3 Distanzwerten
+      %span.imp 3 Distanzwerten
       möglich
       %br
       Anfangswert:
     %ul{:align => "left"}
       %li
-        %font{:color => "#FFCC00"}
-          %b nächster
+        %span.imp nächster
         Seed-Knoten
       %li
-        %font{:color => "#FFCC00"}
-          %b Mittelwert
+        %span.imp Mittelwert
         aller Seed-Koordinaten
       %li
-        %font{:color => "#FFCC00"}
-          %b Triangulierung
+        %span.imp Triangulierung
         mit 3 Seed-Knoten
     %br
     %br
     %p{:align => "left"}
       dann:
-      %font{:color => "#FFCC00"}
-        %b Gradientenabstieg
+      %span.imp Gradientenabstieg
   %section
     = image_tag "multilateration.svg"
   %section
@@ -151,11 +137,9 @@
     %ul
       %li
         Schätzung der
-        %font{:color => "#FFCC00"}
-          %b Distanz
+        %span.imp Distanz
       %li
-        %font{:color => "#FFCC00"}
-          %b Multilaterationsfehler
+        %span.imp Multilaterationsfehler
   %section
     %h2 Fehler: Distanzschätzung I
     %br
@@ -165,12 +149,10 @@
     %ul
       %li
         Hops nicht auf einer
-        %font{:color => "#FFCC00"}
-          %b Geraden
+        %span.imp Geraden
       %li
         Hopabstand ist nicht genau
-        %font{:color => "#FFCC00"}
-          %b r
+        %span.imp r
   %section
     .imageslides
       .slides_container
@@ -191,20 +173,16 @@
     %ul
       %li
         Distanz kann nur ein
-        %font{:color => "#FFCC00"}
-          %b Vielfaches von r
+        %span.imp Vielfaches von r
         sein
       %li
         Knoten jenseits der
-        %font{:color => "#FFCC00"}
-          %b Randgebiete
+        %span.imp Randgebiete
         fehlerhaft
       %li
-        %font{:color => "#FFCC00"}
-          %b Erwartungswert
+        %span.imp Erwartungswert
         des Fehlers:
-        %font{:color => "#FFCC00"}
-          %b r/2
+        %span.imp r/2
   %section
     = image_tag "fehler_granularitaet_1.svg"
   %section
@@ -216,12 +194,10 @@
     %ul
       %li
         Nutzung der Hopcounts der
-        %font{:color => "#FFCC00"}
-          %b Nachbarn
+        %span.imp Nachbarn
       %li
         Bildung des
-        %font{:color => "#FFCC00"}
-          %b Mittelwertes
+        %span.imp Mittelwertes
   %section
     = image_tag "verbesserung_granularitaet_1.svg"
   %section
@@ -236,21 +212,22 @@
       Ursache:
     %ul
       %li
-        %font{:color => "#FFCC00"}
-          %b Ausrichtung
+        %span.imp Ausrichtung
         des Knotens zum Seed-Knoten
       %li
-        %font{:color => "#FFCC00"}
-          %b Position
+        %span.imp Position
         der Seed-Knoten ausschlaggebend
   %section
-    = image_tag "fehler_multilateration_1.svg"
-  %section
-    = image_tag "fehler_multilateration_2.svg"
-  %section
-    = image_tag "fehler_multilateration_3.svg"
-  %section
-    = image_tag "fehler_multilateration_4.svg"
+    .imageslides
+      .slides_container
+        %div
+          = image_tag "fehler_multilateration_1.svg"
+        %div
+          = image_tag "fehler_multilateration_2.svg"
+        %div
+          = image_tag "fehler_multilateration_3.svg"
+        %div
+          = image_tag "fehler_multilateration_4.svg"
   %section
     = image_tag "multilateration_error.png"
   %section

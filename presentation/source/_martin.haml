@@ -6,6 +6,7 @@
   %h2 AGENDA
   %ul{:style => "letter-spacing: normal;text-transform: none;"}
     %li Motivation
+    %li Einführung
     %li Klassifizierung
     %li Lokalisierungsverfahren
     %li Gradientenverfahren
@@ -44,14 +45,14 @@
     =image_tag "global_triang2.svg"
 %section
   %h2 Klassifikation
-  =image_tag "klassifikation.svg", :width => '1000', :height=> '1000'
+  =image_tag "klassifikation.svg", :width => '1000'
 %section
   %section
     %h2 Position und distanz unbekannt
     %ul
       %li Knoten kennen globale Koordinaten nicht
       %li Knoten kennen lokale Koordinaten nicht
-      %li Knoten merken wer in ihrem Empfangsbereich ist
+      %li Knoten merken welche Knoten in ihrem Empfangsbereich sind
   %section
     %h2 Nachbarschaftsmatrix
     =partial "martin_matrix"
@@ -76,7 +77,7 @@
     %h2 Beispiele
     %ul
       %li Smartphones
-      %li WLAN Karten von Google
+      %li WLAN-Karten von Google
       %li GPS in Autos
 %section
   %section
@@ -84,7 +85,7 @@
     %ul
       %li In der Literatur wird nicht genau getrennt
       %li eine Art Distanzmaß wird immer gebraucht
-      %li ohne globalen Bezugspunkt Nutzung von lokalen Koordinatensystemen
+      %li ohne globalen Bezugspunkt -> Nutzung von lokalen Koordinatensystemen
   %section
     %h2 Zentrale Algorithmen
     %ul
