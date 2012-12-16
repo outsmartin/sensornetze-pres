@@ -26,7 +26,7 @@ $(document).ready(function() {
     effect: 'fade',
     fadeEasing: "jswing",
     crossfade: true,
-    fadeSpeed: 1000
+    fadeSpeed: 0
   });
   $('.prev').text("<<");
   $('.next').text(">>");

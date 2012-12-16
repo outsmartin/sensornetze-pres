@@ -30,22 +30,37 @@
       %li Anzahl von Hops
       %li Entfernung anhand von Messung, z.B. Signalstärke
   %section
-    %h2 Signalstärke
-    =image_tag "signalstaerke.png"
-    %p Diagramm von Alex Woo
+    %h2 Knotenbezeichnungen
+    %ul
+      %li Seedknoten, Beacons
+      %li Knoten, Sensor, Node
   %section
     %h2 Time Difference of Arrival
     %ul
       %li Radioimpuls
       %li Akustikimpulse
   %section
-    %h2 Triangulierung
-    =image_tag "global_triang.svg"
+    %h2 Trilateration
+    .imageslides
+      .slides_container
+        %div
+          =image_tag "trilat.svg"
+        %div
+          =image_tag "trilat2.svg"
   %section
-    =image_tag "global_triang2.svg"
+    %h2 Probleme
+    %ul
+      %li Batterien
+      %li schwache Prozessoren
+      %li Knotendichte
+      %li Netzform
+      %li Umgebungshindernisse
+  %section
+    %h2 Signalstärke
+    =image_tag "signalstaerke.png", width: 500
 %section
   %h2 Klassifikation
-  =image_tag "klassifikation.svg", :width => '1000'
+  =image_tag "klassifikation.svg", :width => '700'
 %section
   %section
     %h2 Position und distanz unbekannt
@@ -61,10 +76,9 @@
     .imageslides
       .slides_container
         %div
-          =image_tag "nachbarschaftsgraph.svg", width: 1000
+          =image_tag "nachbarschaftsgraph.svg", width: 700
         %div
-          =image_tag "nachbarschaftsgraph_hindernis.svg", width: 1000
-  %section
+          =image_tag "nachbarschaftsgraph_hindernis.svg", width: 700
 
 %section
   %section
@@ -105,13 +119,50 @@
       %li Knoten kennen nur Teile des Ganzen
   %section
     %h2 bounding box
-    =image_tag "boundingbox.svg", :width => '1000'
+    %ul
+      %li Beaconreichweiten als Quadrat dargestellt
+      %li 2 * Abstand Knoten -> Beacon
+      %li sehr simpler Algorithmus
+  %section
+    =image_tag "boundingbox.svg", :width => '700', height: 400
+  %section
+    %ul
+      %li störanfällig bei fehlerhaften Messungen
+      %li auch auf simplen Prozessoren möglich
   %section
     %h2 diffusion
-    =image_tag "diffusion.svg", width: 1000
+    %ul
+      %li Knoten werden im Zentrum ihrer Nachbarn angenommen
+      %li nur Verbindung nötig
+      %li ebenfalls sehr einfach
+  %section
+    .imageslides
+      .slides_container
+        %div
+          =image_tag "diffusion.svg", width: 500, height: 300
+        %div
+          =image_tag "diffusion2.svg", width: 500, height: 300
+  %section
+    %ul
+      %li bei wenig Beacons oder ungleicher Verteilung ungenau
+      %li Kann verbessert werden wenn Nicht-Beacons mit einbezogen werden
   %section
     %h2 APIT
-    -#=image_tag "diffusion.svg", width: 1000
+    %ul
+      %li große Anzahl Beacons notwendig
+      %li Empfang reicht
+      %li misst Signalstärken und vergleicht mit Nachbarknoten
+      %li erkennt daran ob innerhalb oder ausserhalb
   %section
-    %h2 Semidefinite Programming
-    -#=image_tag "diffusion.svg", width: 1000
+    =image_tag "apit.png", width: 700, height: 400
+  %section
+    %ul
+      %li weniger Komplexität als ähnliche Verfahren
+      %li weniger Kommunikation nötig
+      %li benötigt vergleichbare Kalibrierung aller Knoten
+
+  %section
+    %h2 ...viele weitere mehr
+    %ul
+      %li Semidefinite Programming
+      %li Gradientenbasierte Verfahren
