@@ -57,7 +57,7 @@
       %li Umgebungshindernisse
   %section
     %h2 Signalstärke
-    =image_tag "signalstaerke.png", width: 500
+    =image_tag "signalstaerke.png", :width => 500
 %section
   %h2 Klassifikation
   =image_tag "klassifikation.svg", :width => '700'
@@ -76,9 +76,9 @@
     .imageslides
       .slides_container
         %div
-          =image_tag "nachbarschaftsgraph.svg", width: 700
+          =image_tag "nachbarschaftsgraph.svg", :width => 700
         %div
-          =image_tag "nachbarschaftsgraph_hindernis.svg", width: 700
+          =image_tag "nachbarschaftsgraph_hindernis.svg", :width => 700
 
 %section
   %section
@@ -124,7 +124,7 @@
       %li 2 * Abstand Knoten -> Beacon
       %li sehr simpler Algorithmus
   %section
-    =image_tag "boundingbox.svg", :width => '700', height: 400
+    =image_tag "boundingbox.svg", :width => '700', :height => 400
   %section
     %ul
       %li störanfällig bei fehlerhaften Messungen
@@ -139,9 +139,9 @@
     .imageslides
       .slides_container
         %div
-          =image_tag "diffusion.svg", width: 500, height: 300
+          =image_tag "diffusion.svg", :width => 500, :height => 300
         %div
-          =image_tag "diffusion2.svg", width: 500, height: 300
+          =image_tag "diffusion2.svg", :width => 500, :height => 300
   %section
     %ul
       %li bei wenig Beacons oder ungleicher Verteilung ungenau
@@ -154,7 +154,7 @@
       %li misst Signalstärken und vergleicht mit Nachbarknoten
       %li erkennt daran ob innerhalb oder ausserhalb
   %section
-    =image_tag "apit.png", width: 700, height: 400
+    =image_tag "apit.png", :width => 700, :height => 400
   %section
     %ul
       %li weniger Komplexität als ähnliche Verfahren
